@@ -51,10 +51,10 @@ for image_batch, label_batch in dataloader_train:#dataloader_test
 model = models.MyModel_AH()
 
 # 精度を計算する
-acc_train = models.test_accuracy(model, dataloader_train)
-print(f'train accuracy: {acc_train*100:.3f}%')
-acc_test = models.test_accuracy(model, dataloader_test)
-print(f'test accuracy: {acc_test*100:.3f}%')
+# acc_train = models.test_accuracy(model, dataloader_train)
+# print(f'train accuracy: {acc_train*100:.3f}%')
+# acc_test = models.test_accuracy(model, dataloader_test)
+# print(f'test accuracy: {acc_test*100:.3f}%')
 
 
 #損失関数の選択
@@ -87,7 +87,7 @@ for k in range(n_epochs):
     loss_train = models.train(model, dataloader_test, loss_fn, optimizer)
     time_end = time.time()
     loss_train_history.append(loss_train)
-    print(f'train loss: {loss_train:.3f}({time_end-time_start}s)',end=', ')
+    print(f'train loss: {loss_train:.3f}({time_end-time_start:.1f}s)',end=', ')
 
     loss_test = models.test(model, dataloader_test, loss_fn)
     loss_test_history.append(loss_test)
