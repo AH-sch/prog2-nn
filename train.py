@@ -40,7 +40,7 @@ dataloader_train = torch.utils.data.DataLoader(
 dataloader_test = torch.utils.data.DataLoader(
     ds_test,
     batch_size=bs,
-    shuffle=True
+    shuffle=False
 )
 
 for image_batch, label_batch in dataloader_train:#dataloader_test
