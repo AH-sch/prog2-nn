@@ -1,3 +1,4 @@
+#学習スタート
 import time
 
 import matplotlib.pyplot as plt
@@ -50,7 +51,7 @@ for image_batch, label_batch in dataloader_train:#dataloader_test
 # モデルのインスタンスを作成
 model = models.MyModel_AH()
 
-# 精度を計算する
+# 精度を計算する（さらに精度を上げる）
 # acc_train = models.test_accuracy(model, dataloader_train)
 # print(f'train accuracy: {acc_train*100:.3f}%')
 # acc_test = models.test_accuracy(model, dataloader_test)
